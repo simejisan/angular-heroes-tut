@@ -1,0 +1,20 @@
+<lu *ngFor="let hero of heroes" (click)="onSelect(hero)">
+    <div class="d-flex flex-column bd-highlight">
+        <!-- <h2>{{hero.name | uppercase}}</h2> -->
+        <div class = "d-flex">
+        <div class = "p-2 bg-info bd-highlight text-white">id: {{hero.id}}</div>
+        <div class = "p-2 bg-warning flex-grow-1 bd-highlight">name: {{hero.name}}</div> <br>
+    </div>
+    </div>
+</lu>
+
+<app-hero-detail [hero]="selectedHero">
+</app-hero-detail>
+<!-- <div *ngIf="selectedHero">
+    <h2>
+        Selected Hero: {{selectedHero.name}}
+    </h2> -->
+<!-- <div>
+        id: {{selectedHero.id}}</div>
+    <input [(ngModel)]= "selectedHero.name" placeholder="name"> -->
+<!-- </div> -->
